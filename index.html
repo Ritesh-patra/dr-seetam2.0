@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. T. Seetam Kumar | Advanced Neuro & Vascular Intervention</title>
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <!-- Lenis CSS for smooth scrolling and fixed overflow issues -->
+    <style>
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        body,
+        html {
+            overflow-x: hidden !important;
+            width: 100vw;
+        }
+    </style>
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* Updated theme variables to match editorial design inspiration */
+        :root {
+            --medical-primary: #05241C;
+            /* Deeper forest green */
+            --medical-secondary: #F8F6F3;
+            /* Editorial bone/beige */
+            --medical-accent: #1A3D34;
+            --medical-highlight: #C5A059;
+            /* Refined Gold */
+            --medical-dark: #020F0B;
+            --medical-gold: #C5A059;
+            --medical-soft-blue: #E9F1EE;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Instrument Serif', serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--medical-secondary);
+            color: var(--medical-dark);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden !important;
+            width: 100vw;
+        }
+
+        /* Lenis smooth scrolling fixes */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis-stopped {
+            overflow: hidden;
+        }
+
+        /* Utility classes replacement */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            background-color: var(--medical-primary);
+            color: white;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(13, 59, 46, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--medical-dark);
+            transform: scale(1.05);
+        }
+
+        .card-glass {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .card-glass:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-1rem);
+            box-shadow: 0 25px 50px -12px rgba(13, 59, 46, 0.15);
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 1rem 0;
+            border-top: 1px solid rgba(13, 59, 46, 0.1);
+            border-bottom: 1px solid rgba(13, 59, 46, 0.1);
+            margin-bottom: 5rem;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid var(--medical-primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 50;
+            transition: transform 0.1s ease-out;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .cursor-follower {
+                display: block;
+            }
+        }
+
+        .bg-medical-mesh {
+            background-color: var(--medical-secondary);
+            background-image:
+                radial-gradient(at 0% 0%, rgba(197, 217, 210, 0.15) 0, transparent 50%),
+                radial-gradient(at 50% 0%, rgba(197, 217, 210, 0.1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(197, 217, 210, 0.15) 0, transparent 50%);
+        }
+
+        /* Added accordion and editorial list styles */
+        .editorial-list-item {
+            border-bottom: 1px solid rgba(13, 59, 46, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .editorial-list-item:hover {
+            padding-left: 2rem;
+            background-color: rgba(13, 59, 46, 0.02);
+        }
+
+        /* Swiper Custom Styling */
+        .swiper-services .swiper-slide {
+            height: auto;
+            opacity: 0.4;
+            transition: opacity 0.5s ease;
+        }
+
+        .swiper-services .swiper-slide-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-medical-secondary">
+    <!-- improved custom cursor with trailing effect -->
+    <div id="cursor" class="cursor-follower opacity-0 pointer-events-none"></div>
+    <div id="cursor-dot"
+        class="fixed w-2 h-2 bg-medical-highlight rounded-full pointer-events-none z-[60] hidden md:block transition-transform duration-100 ease-out">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-40 px-6 py-8 transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-serif font-bold text-medical-primary flex items-center gap-2">
+                Dr. T. Seetam Kumar
+            </a>
+
+            <div class="hidden md:flex items-center gap-12">
+                <a href="#about" class="nav-link text-sm font-bold tracking-widest uppercase">About</a>
+                <a href="#specialties" class="nav-link text-sm font-bold tracking-widest uppercase">Specialties</a>
+                <a href="#services" class="nav-link text-sm font-bold tracking-widest uppercase">Services</a>
+                <a href="#media" class="nav-link text-sm font-bold tracking-widest uppercase">Media</a>
+                <a href="#testimonials" class="nav-link text-sm font-bold tracking-widest uppercase">Patient Stories</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#contact" class="btn-primary py-3 px-6 text-sm">Book Appointment</a>
+            </div>
+
+            <button class="md:hidden text-medical-primary p-2" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#041E17] z-50 translate-x-full transition-transform duration-700 flex flex-col items-center justify-center gap-8 text-white p-10">
+        <button id="close-menu" class="absolute top-10 right-10 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" x2="6" y1="6" y2="18" />
+                <line x1="6" x2="18" y1="6" y2="18" />
+            </svg>
+        </button>
+        <a href="#about" class="text-4xl font-serif mobile-nav-link">About</a>
+        <a href="#specialties" class="text-4xl font-serif mobile-nav-link">Specialties</a>
+        <a href="#services" class="text-4xl font-serif mobile-nav-link">Services</a>
+        <a href="#media" class="text-4xl font-serif mobile-nav-link">Media</a>
+        <a href="#testimonials" class="text-4xl font-serif mobile-nav-link">Patients</a>
+        <a href="#contact" class="text-4xl font-serif mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-32 pb-5 px-6 flex items-center relative overflow-hidden bg-medical-mesh">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center relative z-10">
+            <div class="lg:col-span-8">
+                <div class="inline-flex items-center gap-3 px-6 py-2 bg-white/50 backdrop-blur-md rounded-full text-medical-primary text-xs font-black tracking-[0.3em] uppercase mb-10 border border-white/20"
+                    data-aos="fade-down">
+                    <span class="w-1.5 h-1.5 bg-medical-highlight rounded-full animate-ping"></span>
+                    DM Neuro & Vascular Intervention — Gold Medalist
+                </div>
+                <h1 class="text-7xl md:text-[10rem] mb-12 leading-[0.85] tracking-tighter" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Advanced <br>
+                    <span class="italic font-serif text-medical-primary relative inline-block">
+                        Interventions.
+                        <svg class="absolute -bottom-4 left-0 w-full" viewBox="0 0 400 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 15C50 5 150 5 200 15C250 25 350 25 395 15" stroke="#D4AF37" stroke-width="4"
+                                stroke-linecap="round" />
+                        </svg>
+                    </span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-medical-primary/70 mb-16 max-w-2xl leading-relaxed font-light"
+                    data-aos="fade-up" data-aos-delay="400">
+                    Expert minimally invasive procedures for <span
+                        class="text-medical-primary font-medium">Cerebrovascular & Systemic Vascular</span> conditions.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="#contact" class="btn-primary" data-aos="fade-up" data-aos-delay="600">
+                        Book Appointment
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" x2="19" y1="12" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-4 relative group" data-aos="zoom-out" data-aos-duration="2000">
+                <div
+                    class="aspect-[3/4] rounded-[5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(13,59,46,0.3)] relative z-10">
+                    <img src="images/seetam.png" alt="Dr. T. Seetam Kumar"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale hover:grayscale-0">
+                </div>
+                <!-- added more dynamic decorative elements to hero -->
+                <div
+                    class="absolute -top-16 -right-16 w-80 h-80 bg-medical-accent/40 rounded-full blur-[100px] -z-10 animate-pulse">
+                </div>
+                <div
+                    class="absolute -bottom-16 -left-16 w-64 h-64 bg-medical-highlight/20 rounded-full blur-[80px] -z-10">
+                </div>
+
+                <div class="absolute -bottom-10 -right-10 bg-white/80 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl z-20 border border-white/40 max-w-[200px]"
+                    data-aos="fade-up" data-aos-delay="800">
+                    <p class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 mb-2">Procedures</p>
+                    <p class="text-4xl font-serif text-medical-primary">10,000+</p>
+                    <p class="text-[10px] leading-tight mt-2 text-medical-primary/60">Across complex neuro and vascular
+                        cases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Dr. Seetam Section -->
+    <section id="about" class="py-10 px-6 bg-white text-black overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-medical-highlight font-bold tracking-[0.4em] uppercase text-xs mb-6 block">About
+                        Dr. Seetam Kumar</span>
+                    <h2 class="text-7xl md:text-8xl  leading-[0.9]">Mastering the <span
+                            class="italic font-serif">Flow</span> of Life.</h2>
+                    <p class="text-xl text-medical-primary/70 text-justify mb-10 leading-normal italic">
+                        "Dr. T. Seetam Kumar is a gold-medalist interventional radiologist with specialist expertise in
+                        neurovascular and endovascular interventions."
+                    </p>
+                    <p class="text-lg text-justify text-medical-primary/60 mb-12 leading-relaxed">
+                        From acute stroke interventions to tumor embolisation and advanced pediatric vascular
+                        procedures, Dr. Seetam combines strong diagnostic radiology training with advanced fellowship
+                        training to provide precise, evidence-based care.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                        <!-- Qualifications -->
+                        <div class="editorial-list-item p-8 rounded-3xl bg-white/70 backdrop-blur-xl shadow-lg">
+                            <h4
+                                class="flex items-center gap-3 text-xs uppercase tracking-widest font-black text-medical-highlight mb-5">
+                                <i class="fas fa-graduation-cap text-base"></i>
+                                Qualifications
+                            </h4>
+
+                            <ul class="space-y-4 text-sm font-semibold text-slate-text">
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-user-md text-medical-highlight"></i>
+                                    MBBS (Hons)
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-award text-yellow-500"></i>
+                                    MD Radiodiagnosis — Gold Medal
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-award text-yellow-500"></i>
+                                    DM Interventional Radiology — Gold Medal
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-certificate text-medical-highlight"></i>
+                                    FRCR (UK)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Memberships -->
+                        <div class="editorial-list-item p-8 rounded-3xl bg-white/70 backdrop-blur-xl shadow-lg">
+                            <h4
+                                class="flex items-center gap-3 text-xs uppercase tracking-widest font-black text-medical-highlight mb-5">
+                                <i class="fas fa-users text-base"></i>
+                                Memberships
+                            </h4>
+
+                            <ul class="space-y-3 text-sm text-slate-text/80 font-medium">
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                    ESMINT | ASNR | ISNR
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-green-500"></i>
+                                    ISVIR | RSNA
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="relative pt-20">
+                    <div class="aspect-[4/5] rounded-[5rem] overflow-hidden shadow-2xl relative z-10">
+                        <img src="images/seetam.png" class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="absolute -top-10 -left-10 w-64 h-64 bg-medical-highlight/10 rounded-full blur-3xl -z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Specializations with Swiper JS -->
+    <section id="specialties" class="py-10 px-6 bg-white text-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <span class="text-medical-primary font-bold tracking-[0.4em] uppercase text-xs mb-6 block">Our
+                        Expertise</span>
+                    <h2 class="text-5xl md:text-8xl leading-[0.9]">Clinical <span
+                            class="italic font-serif text-medical-primary/40">Specializations.</span></h2>
+                </div>
+
+            </div>
+
+            <div class="swiper swiper-services  overflow-visible">
+                <div class="swiper-wrapper mb-0">
+
+                    <!-- 1. Stroke Management -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-6">
+                                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            </div>
+
+                            <div class="px-2 sm:px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-3">
+                                    Neurovascular
+                                </span>
+
+                                <h3
+                                    class="text-xl sm:text-3xl font-serif mb-3 group-hover:text-medical-primary transition-colors">
+                                    Stroke Management
+                                </h3>
+
+                                <p class="text-black/60 text-sm sm:text-base mb-6 leading-relaxed">
+                                    Advanced care for all types of stroke. Early intervention helps prevent brain damage
+                                    and improves recovery.
+                                </p>
+
+                                <a href="#contact"
+                                    class="inline-flex items-center gap-2 text-sm font-bold text-medical-primary">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 2. Aneurysm Treatment -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img2.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Cerebrovascular
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Aneurysm Treatment
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Minimally invasive aneurysm treatment to reduce rupture risk and improve patient
+                                    safety.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Varicose Vein Therapy -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img3.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Venous Care
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Varicose Vein Therapy
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Laser and non-surgical treatments that relieve pain and improve vein appearance.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Deep Vein Thrombosis -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img4.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Vascular Care
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Deep Vein Thrombosis (DVT)
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Early diagnosis and treatment to prevent life-threatening blood clot complications.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Embolism Management -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img5.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Emergency Care
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Embolism Management
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Targeted treatments to restore circulation and reduce severe complications.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Vascular Malformation -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img6.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Vascular Disorders
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Vascular Malformation
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Image-guided procedures to relieve symptoms and prevent disease progression.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Tumor Embolization -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img7.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Oncology Support
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Tumor Embolization
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Reduces blood supply to tumors, often used before surgery or as treatment.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Arteriovenous Malformation -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-fit flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img8.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Neuro Care
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Arteriovenous Malformation (AVM)
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Specialized AVM treatment to prevent rupture and neurological damage.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Arteriovenous Fistula -->
+                    <div class="swiper-slide">
+                        <div class="bg-medical-secondary p-4 rounded-[2rem] h-full flex flex-col group 
+               border border-black/5 
+               w-full min-w-[300px] sm:max-w-full">
+                            <div class="aspect-video rounded-[1.5rem] overflow-hidden mb-8">
+                                <img src="images/img9.jpg"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="px-4 pb-6">
+                                <span
+                                    class="text-xs font-bold uppercase tracking-widest text-medical-primary/40 block mb-4">
+                                    Interventional Care
+                                </span>
+                                <h3 class="text-3xl font-serif mb-4 group-hover:text-medical-primary">
+                                    Arteriovenous Fistula (AVF)
+                                </h3>
+                                <p class="text-black/60 mb-8">
+                                    Safe interventional procedures to correct abnormal vessel connections.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold">
+                                    Explore Expertise →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex gap-4 md:mt-0">
+                    <button
+                        class="swiper-prev-spec w-16 h-16 rounded-full border border-black/10 flex items-center justify-center hover:bg-[#020F0B] hover:text-[#05241C] transition-all">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button
+                        class="swiper-next-spec w-16 h-16 rounded-full border border-black/10 flex items-center justify-center hover:bg-[#020F0B] hover:text-[#05241C] transition-all">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Expertise Sections -->
+    <section class="py-10 px-6 bg-gradient-to-b from-white to-medical-secondary/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-7xl mb-3 font-serif italic text-center" data-aos="fade-up">
+                Scope of Practice
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+                <!-- Neurovascular -->
+                <div class="relative p-5 rounded-[2.5rem] bg-white/80 backdrop-blur-xl shadow-xl border border-black/5"
+                    data-aos="fade-right">
+
+                    <div
+                        class="inline-flex items-center gap-3 px-5 py-2 bg-medical-soft-blue text-medical-primary text-[11px] font-black uppercase tracking-widest rounded-full mb-10">
+                        <i class="fas fa-brain"></i>
+                        Neuro / Neurovascular
+                    </div>
+
+                    <ul class="divide-y divide-black/10">
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-bolt text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Acute Stroke Management
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-circle-nodes text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Aneurysm Coiling & Flow Diversion
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-project-diagram text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Brain & Spinal AVM Embolisation
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-heart-pulse text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Carotid Angioplasty & Stenting
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Body / Peripheral -->
+                <div class="relative p-10 rounded-[2.5rem] bg-white/80 backdrop-blur-xl shadow-xl border border-black/5"
+                    data-aos="fade-left">
+
+                    <div
+                        class="inline-flex items-center gap-3 px-5 py-2 bg-medical-soft-blue text-medical-primary text-[11px] font-black uppercase tracking-widest rounded-full mb-10">
+                        <i class="fas fa-dna"></i>
+                        Body / Peripheral Vascular
+                    </div>
+
+                    <ul class="divide-y divide-black/10">
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-liver text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Hepatic Vascular Interventions
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-female text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Uterine & Prostatic Embolisation
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-virus text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Head & Neck Tumour Embolisation
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+
+                        <li class="flex items-center justify-between py-6 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-medical-primary/10 flex items-center justify-center">
+                                    <i class="fas fa-microscope text-medical-primary"></i>
+                                </div>
+                                <span class="text-xl font-serif italic">
+                                    Image-guided Biopsies
+                                </span>
+                            </div>
+                            <i
+                                class="fas fa-arrow-right text-medical-highlight opacity-0 group-hover:opacity-100 transition"></i>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Awards & Achievements -->
+    <section class="py-10 px-6 bg-medical-secondary overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-7xl font-serif italic mb-5 text-center">Recognition & Awards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-medical-primary/5 group hover:bg-medical-primary transition-all duration-700"
+                    data-aos="fade-up">
+                    <div
+                        class="w-12 h-12 bg-medical-highlight/20 rounded-full flex items-center justify-center mb-10 group-hover:bg-medical-highlight transition-all">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" class="text-medical-primary">
+                            <path
+                                d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55.47.98.97 1.21C11.47 18.44 12 19 12 19s.53-.56 1.03-.79c.5-.23.97-.66.97-1.21v-2.34M7 2h10c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1Z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-medical-highlight mb-4">Gold Medal
+                    </h4>
+                    <p class="text-2xl font-serif group-hover:text-[#05241C] transition-colors">DM Interventional
+                        Radiology
+                        (NIMHANS), 2025</p>
+                </div>
+                <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-medical-primary/5 group hover:bg-medical-primary transition-all duration-700"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-medical-highlight/20 rounded-full flex items-center justify-center mb-10 group-hover:bg-medical-highlight transition-all">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" class="text-medical-primary">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-medical-highlight mb-4">Quiz Winner
+                    </h4>
+                    <p class="text-2xl font-serif group-hover:text-[#05241C] transition-colors">ISNR 2025
+                        Neuro-intervention
+                        Quiz, Second Prize</p>
+                </div>
+                <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-medical-primary/5 group hover:bg-medical-primary transition-all duration-700"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-medical-highlight/20 rounded-full flex items-center justify-center mb-10 group-hover:bg-medical-highlight transition-all">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" class="text-medical-primary">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-black text-medical-highlight mb-4">MD Honors</h4>
+                    <p class="text-2xl font-serif group-hover:text-[#05241C] transition-colors">MD Radiodiagnosis, Gold
+                        Medalist 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Publications -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+
+            <h2 class="text-5xl md:text-7xl mb-10 font-serif italic text-center" data-aos="fade-up">
+                Selected Publications
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Publication Card -->
+                <div class="editorial-list-item p-8 rounded-3xl border border-black/5 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group"
+                    data-aos="fade-up">
+
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-xs font-bold px-3 py-1 bg-medical-soft-blue rounded-full">
+                            Neurology
+                        </span>
+                        <span class="text-xs font-bold text-medical-primary/40 uppercase tracking-widest">
+                            May 2025
+                        </span>
+                    </div>
+
+                    <h4
+                        class="text-2xl font-serif italic mb-5 leading-tight group-hover:text-medical-highlight transition-colors">
+                        Intersection of Autoimmunity: NMDA Positivity & Pachymeningitis
+                    </h4>
+
+                    <p class="text-sm text-medical-primary/60 mb-8 leading-relaxed">
+                        Ann Indian Acad Neurol. Diagnostic challenge involving primary CNS Angiitis in a single patient.
+                    </p>
+
+                    <a href="https://www.researchgate.net/profile/Seetam-Tumulu" target="_blank"
+                        class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-medical-primary hover:text-medical-highlight transition">
+                        View Research
+                        <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Publication Card -->
+                <div class="editorial-list-item p-8 rounded-3xl border border-black/5 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group"
+                    data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-xs font-bold px-3 py-1 bg-medical-soft-blue rounded-full">
+                            Imaging
+                        </span>
+                        <span class="text-xs font-bold text-medical-primary/40 uppercase tracking-widest">
+                            Mar 2025
+                        </span>
+                    </div>
+
+                    <h4
+                        class="text-2xl font-serif italic mb-5 leading-tight group-hover:text-medical-highlight transition-colors">
+                        Type 1 Wolfram Syndrome as Intracranial Haemorrhage
+                    </h4>
+
+                    <p class="text-sm text-medical-primary/60 mb-8 leading-relaxed">
+                        Novel neuroimaging and angiographic findings in rare syndrome presentation.
+                    </p>
+
+                    <a href="https://www.researchgate.net/profile/Seetam-Tumulu" target="_blank"
+                        class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-medical-primary hover:text-medical-highlight transition">
+                        View Research
+                        <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Publication Card -->
+                <div class="editorial-list-item p-8 rounded-3xl border border-black/5 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group"
+                    data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-xs font-bold px-3 py-1 bg-medical-soft-blue rounded-full">
+                            Clinical
+                        </span>
+                        <span class="text-xs font-bold text-medical-primary/40 uppercase tracking-widest">
+                            2025
+                        </span>
+                    </div>
+
+                    <h4
+                        class="text-2xl font-serif italic mb-5 leading-tight group-hover:text-medical-highlight transition-colors">
+                        Lateral Gaze Palsy in Duane Retraction Syndrome
+                    </h4>
+
+                    <p class="text-sm text-medical-primary/60 mb-8 leading-relaxed">
+                        Teaching Video NeuroImage publication in Neurology Journal.
+                    </p>
+
+                    <a href="https://www.researchgate.net/profile/Seetam-Tumulu" target="_blank"
+                        class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-medical-primary hover:text-medical-highlight transition">
+                        View Research
+                        <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- media & press -->
+    <section class="py-20 px-6 bg-[#f8fafc]" id="media">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-serif italic mb-6 text-slate-900" data-aos="fade-up">
+                    Media & Press
+                </h2>
+                <div class="w-24 h-1 bg-medical-gold mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-base text-gray-500" data-aos="fade-up">
+                    Exploring the frontiers of neurovascular care through visual stories and clinical highlights.
+                </p>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+
+                <!-- news1 -->
+                <div
+                    class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                    <div class="relative">
+                        <img src="images/newspaper 1.jpeg" class="w-full object-cover">
+
+                    </div>
+
+                </div>
+                <!-- news2 -->
+                <div
+                    class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                    <div class="relative">
+                        <img src="images/newspaper 2.jpeg" class="w-full object-cover">
+
+                    </div>
+
+                </div>
+
+                <!-- video -->
+                <a href="https://www.facebook.com/share/v/182HapCcBE/"
+                    class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                    <div class="relative">
+                        <img src="images/videos1.jpeg" class="w-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md border border-white/50 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- video -->
+                <a href="https://www.facebook.com/share/v/1Ef27FaJ6t/"
+                    class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                    <div class="relative">
+                        <img src="images/videos2.jpeg" class="w-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md border border-white/50 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </>
+                    <!-- video -->
+                    <a href="https://www.facebook.com/share/v/17NDHTu4vE/"
+                        class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                        <div class="relative">
+                            <img src="images/videos3.jpeg" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md border border-white/50 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-play text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- video -->
+                    <a href="https://www.facebook.com/share/v/1DgF2o2BNm/"
+                        class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                        <div class="relative">
+                            <img src="images/video4.jpeg" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md border border-white/50 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-play text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- video5 -->
+                    <a href="https://www.facebook.com/share/r/1E9DL989MZ/"
+                        class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                        <div class="relative">
+                            <img src="images/videos5.jpeg" class="w-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-md border border-white/50 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-play text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div
+                        class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                        <div class="relative">
+                            <img src="images/news1.jpeg" class="w-full object-cover">
+                        </div>
+                    </div>
+
+                    <div
+                        class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                        <div class="relative">
+                            <img src="images/seetam podiom.jpeg" class="w-full object-cover">
+                        </div>
+                    </div>
+
+                    <div
+                        class="break-inside-avoid group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100">
+                        <img src="images/seetam team.jpeg" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-serif italic text-xl">Patient Success Story</h3>
+                            <p class="text-gray-500 text-sm">Recovery journey of a 45-year-old stroke survivor.</p>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section id="contact" class="py-10 px-6 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20">
+            <div class="lg:col-span-5" data-aos="fade-right">
+                <h2 class="text-6xl font-serif italic mb-10">Book an <br>Appointment</h2>
+                <p class="text-xl text-medical-primary/70 mb-12 leading-relaxed italic">
+                    "Your message will be sent directly to our coordination team via WhatsApp for immediate triage."
+                </p>
+
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6 group">
+                        <div
+                            class="w-14 h-14 bg-medical-secondary rounded-2xl flex items-center justify-center text-medical-primary group-hover:bg-medical-primary group-hover:text-[#05241C] transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest opacity-50">Phone</p>
+                            <a href="tel:+919348637767" class="text-xl font-bold">+91 93486 37767</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 group">
+                        <div
+                            class="w-14 h-14 bg-medical-secondary rounded-2xl flex items-center justify-center text-medical-primary group-hover:bg-medical-primary group-hover:text-[#05241C] transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest opacity-50">Email</p>
+                            <a href="mailto:info@drseetamkumar@gmail.com"
+                                class="text-xl font-bold">info@drseetamkumar@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 group">
+                        <div
+                            class="w-14 h-14 bg-medical-secondary rounded-2xl flex items-center justify-center text-medical-primary group-hover:bg-medical-primary group-hover:text-[#05241C] transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest opacity-50">Location</p>
+                            <p class="text-xl font-bold">Plot No.1 Besides, Satyasai Enclave Rd, Khandagiri Bhubaneswar,
+                                India 751030 Odisha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7" data-aos="fade-left">
+                <form id="contact-form" class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold uppercase tracking-widest opacity-50 ml-1">First
+                                Name</label>
+                            <input type="text" placeholder="John"
+                                class="w-full bg-medical-secondary border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-medical-primary outline-none transition-all"
+                                required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold uppercase tracking-widest opacity-50 ml-1">Last Name</label>
+                            <input type="text" placeholder="Doe"
+                                class="w-full bg-medical-secondary border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-medical-primary outline-none transition-all"
+                                required>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold uppercase tracking-widest opacity-50 ml-1">Email Address</label>
+                        <input type="email" placeholder="john@example.com"
+                            class="w-full bg-medical-secondary border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-medical-primary outline-none transition-all"
+                            required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold uppercase tracking-widest opacity-50 ml-1">Message</label>
+                        <textarea rows="4" placeholder="How can we help you?"
+                            class="w-full bg-medical-secondary border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-medical-primary outline-none transition-all"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full justify-center py-6 text-xl">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Large SVG Watermark -->
+        <div class="absolute -bottom-20 -right-20 opacity-5 pointer-events-none">
+            <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M300 100C300 100 200 100 200 200C200 300 300 400 300 400C300 400 400 300 400 200C400 100 300 100 300 100Z"
+                    stroke="currentColor" stroke-width="40" />
+                <path
+                    d="M100 300C100 300 100 200 200 200C300 200 400 300 400 300C400 300 300 400 200 400C100 400 100 300 100 300Z"
+                    stroke="currentColor" stroke-width="40" />
+            </svg>
+        </div>
+    </section>
+
+
+
+    <!-- Added Services & Specializations Section -->
+    <section id="services" class="py-10 px-6 bg-medical-secondary">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <h2 class="text-7xl md:text-8xl font-serif italic mb-8">Clinical Services</h2>
+                <p class="text-xl text-medical-primary/60 max-w-2xl mx-auto">Providing advanced, minimally invasive
+                    solutions for complex vascular and neurological conditions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Neurovascular -->
+                <div class="card-glass group" data-aos="fade-up">
+                    <div
+                        class="w-16 h-16 bg-medical-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-medical-primary group-hover:text-[#05241C] transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6Z" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-serif italic mb-6">Neurovascular</h3>
+                    <ul class="space-y-4 text-medical-primary/70">
+                        <li>• Stroke Intervention</li>
+                        <li>• Aneurysm Coiling</li>
+                        <li>• Carotid Artery Stenting</li>
+                        <li>• AVM Embolization</li>
+                    </ul>
+                </div>
+                <!-- Endovascular -->
+                <div class="card-glass group" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-medical-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-medical-primary group-hover:text-[#05241C] transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-serif italic mb-6">Endovascular</h3>
+                    <ul class="space-y-4 text-medical-primary/70">
+                        <li>• Peripheral Artery Disease</li>
+                        <li>• Varicose Vein Treatment</li>
+                        <li>• Uterine Fibroid Embolization</li>
+                        <li>• Dialysis Access</li>
+                    </ul>
+                </div>
+                <!-- Advanced Imaging -->
+                <div class="card-glass group" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-medical-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-medical-primary group-hover:text-[#05241C] transition-colors duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path d="M2 12h3m14 0h3m-9-7v3m0 8v3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-serif italic mb-6">Imaging Guidance</h3>
+                    <ul class="space-y-4 text-medical-primary/70">
+                        <li>• CT-Guided Biopsies</li>
+                        <li>• Ultrasound Interventions</li>
+                        <li>• Fluoroscopic Procedures</li>
+                        <li>• Vascular Mapping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white pt-32 pb-16 px-6 border-t border-black/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-32">
+                <div class="lg:col-span-5">
+                    <a href="#" class="text-4xl font-serif font-bold text-black mb-8 block">
+                        Dr. T. Seetam Kumar
+                    </a>
+                    <p class="text-xl text-black/60 max-w-sm mb-12">
+                        Pioneering advanced neuro & vascular interventions with a commitment to clinical excellence and
+                        compassionate patient care.
+                    </p>
+                    <!-- Added social media icons with requested hover color -->
+                    <div class="flex gap-6">
+                        <a href="https://www.facebook.com/profile.php?id=61580128345274"
+                            class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-medical-primary hover:text-white hover:border-medical-primary transition-all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/interventionist_seetam/"
+                            class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-medical-primary hover:text-white hover:border-medical-primary transition-all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/108435288/admin/dashboard/"
+                            class="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-medical-primary hover:text-white hover:border-medical-primary transition-all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-sm font-bold uppercase tracking-widest mb-6">Explore</h6>
+                    <ul class="space-y-4 text-black/60">
+                        <li><a href="#about" class="hover:text-medical-primary transition-colors">About</a></li>
+                        <li><a href="#specialties" class="hover:text-medical-primary transition-colors">Specialties</a>
+                        </li>
+                        <li><a href="#services" class="hover:text-medical-primary transition-colors">Clinical
+                                Services</a></li>
+                        <li><a href="#media" class="hover:text-medical-primary transition-colors">Media</a></li>
+                        <li><a href="#testimonials" class="hover:text-medical-primary transition-colors">Patient
+                                Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-sm font-bold uppercase tracking-widest mb-6">Connect</h6>
+                    <ul class="space-y-4 text-black/60">
+                        <li><a href="#" class="hover:text-medical-primary transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-medical-primary transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-medical-primary transition-colors">Twitter (X)</a></li>
+                        <li><a href="#" class="hover:text-medical-primary transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-black/5 text-sm text-black/40">
+                <p>&copy; 2026 Dr. T. Seetam Kumar. All Rights Reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-medical-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-medical-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Added Lenis for smooth scrolling -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Custom Cursor Expansion
+        const cursor = document.getElementById('cursor');
+        const cursorDot = document.getElementById('cursor-dot');
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.6,
+                ease: "power2.out",
+                opacity: 1
+            });
+            gsap.to(cursorDot, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.1,
+                ease: "none"
+            });
+        });
+
+        gsap.utils.toArray('.service-list-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                gsap.to(item.querySelector('h3'), { x: 20, duration: 0.4 });
+            });
+            item.addEventListener('mouseleave', () => {
+                gsap.to(item.querySelector('h3'), { x: 0, duration: 0.4 });
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-medical-secondary/80', 'backdrop-blur-xl', 'py-4', 'shadow-sm');
+                navbar.classList.remove('py-8');
+            } else {
+                navbar.classList.remove('bg-medical-secondary/80', 'backdrop-blur-xl', 'py-4', 'shadow-sm');
+                navbar.classList.add('py-8');
+            }
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        const hideMenu = () => {
+            mobileMenu.classList.add('translate-x-full');
+        };
+
+        closeMenu.addEventListener('click', hideMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', hideMenu));
+
+        // Animated Counters
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    const count = { val: 0 };
+                    gsap.to(count, {
+                        val: target,
+                        duration: 2,
+                        ease: "power2.out",
+                        onUpdate: () => {
+                            entry.target.innerText = Math.floor(count.val) + (target >= 100 ? '+' : '');
+                        }
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(c => counterObserver.observe(c));
+
+        // Swiper Initialization
+        const swiperSpec = new Swiper(".swiper-services", {
+            slidesPerView: 1.2,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: false,
+            grabCursor: true,
+            navigation: {
+                nextEl: ".swiper-next-spec",
+                prevEl: ".swiper-prev-spec",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.5,
+                },
+                1024: {
+                    slidesPerView: 3.2,
+                }
+            }
+        });
+
+        const testimonialSwiper = new Swiper(".mySwiper", {
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-120%", 0, -500],
+                },
+                next: {
+                    shadow: true,
+                    translate: ["120%", 0, -500],
+                },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            grabCursor: true
+        });
+
+        // GSAP Parallax Effects
+        gsap.to(".marquee-content", {
+            x: -200,
+            scrollTrigger: {
+                trigger: ".marquee-container",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            }
+        });
+
+        // Contact Form Validation/Submit Mock
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = "Message Sent!";
+                btn.classList.replace('bg-medical-primary', 'bg-green-600');
+                contactForm.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-medical-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            mirror: false
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const firstName = document.querySelector('input[placeholder="John"]').value;
+            const lastName = document.querySelector('input[placeholder="Doe"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const message = document.querySelector('textarea').value;
+
+            const whatsappNumber = "919348637767";
+
+            const whatsappMessage = `Hello Doctor,%0A
+Name: ${firstName} ${lastName}%0A
+Email: ${email}%0A
+Message: ${message}`;
+
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
+</body>
+
+</html>
