@@ -1,207 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Neuro & Vascular Intervention in Bhubaneswar, Odisha</title>
+    <title>Best Neuro & Vascular Intervention in Bhubaneswar, Odisha</title>
     <meta name="description" content="Looking for the best neuro & vascular intervention in Bhubaneswar, Odisha. Dr. Seetam Kumar offers advanced treatment for stroke, aneurysm, embolisation, and veins.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="images/dr soumik.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'medical-blue': '#0066CC',
-                        'medical-teal': '#00A3A3',
-                        'medical-purple': '#6B46C1',
-                        'accent-orange': '#FF6B35',
-                        'accent-green': '#10B981',
-                        'dark-navy': '#0F172A',
-                        'light-cyan': '#67E8F9'
+                        'bg-cream': '#FDFBF7',      
+                        'med-gold': '#C5A059',      
+                        'med-primary': '#05241C',   
+                        'soft-beige': '#F3EEE7',    
+                        'pure-white': '#FFFFFF'
                     }
                 }
             }
         }
     </script>
     <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden; 
+        }
+        .serif-font { font-family: 'Instrument Serif', serif; }
+
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #FDFBF7;
+            border-bottom: 1px solid #F3EEE7;
         }
 
-        .hover-glow:hover {
-            box-shadow: 0 0 30px rgba(0, 163, 163, 0.6);
-            transform: translateY(-2px);
+        .solid-card {
+            background: #FFFFFF;
+            border: 1px solid #F3EEE7;
+            transition: all 0.3s ease;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #67E8F9, #10B981, #FF6B35);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        /* Responsive Fix for extremely long words */
+        .break-words {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
-        .hero-bg {
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 25%, #334155 50%, #475569 75%, #64748B 100%);
-            position: relative;
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
         }
-
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(103, 232, 249, 0.2) 0%, transparent 50%);
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, rgba(16, 185, 129, 0.3) 0%, rgba(103, 232, 249, 0.3) 100%);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 600;
+        #mobile-menu.active {
+            max-height: 400px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 
-<body class="bg-dark-navy text-white">
-    <!-- Navigation -->
+<body class="bg-bg-cream text-med-primary">
     <nav class="fixed top-0 w-full z-50 glass-effect">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="index.html" class="w-16 h-16 rounded-full overflow-hidden mr-3">
-                        <img src="images/dr soumik.jpg" alt="Logo" class="w-full h-full object-cover object-top" />
-                    </a>
-                    <span class="text-xl font-bold gradient-text">Dr. Seetam Kumar</span>
+                    <span class="text-xl md:text-2xl serif-font italic font-bold text-med-primary">Dr. Seetam Kumar</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html"
-                        class="nav-link hover:text-accent-green transition-colors duration-300">Home</a>
-                    <a href="#about" class="nav-link hover:text-accent-green transition-colors duration-300">About</a>
-                    <a href="#services"
-                        class="nav-link hover:text-accent-green transition-colors duration-300">Services</a>
-                    <a href="#contact"
-                        class="nav-link hover:text-accent-green transition-colors duration-300">Contact</a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-[10px] font-black uppercase tracking-widest hover:text-med-gold transition-colors">Home</a>
+                    <a href="#about" class="text-[10px] font-black uppercase tracking-widest hover:text-med-gold transition-colors">About</a>
+                    <a href="#services" class="text-[10px] font-black uppercase tracking-widest hover:text-med-gold transition-colors">Services</a>
+                    <a href="#contact" class="text-[10px] font-black uppercase tracking-widest hover:text-med-gold transition-colors">Contact</a>
+                    <button class="bg-med-gold text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-med-primary transition-all">Book Now</button>
                 </div>
+
+                <button class="md:hidden text-med-primary text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden flex flex-col space-y-4">
+                <a href="index.html" class="text-xs font-bold uppercase tracking-widest pt-4">Home</a>
+                <a href="#about" class="text-xs font-bold uppercase tracking-widest">About</a>
+                <a href="#services" class="text-xs font-bold uppercase tracking-widest">Services</a>
+                <a href="#contact" class="text-xs font-bold uppercase tracking-widest">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen hero-bg relative overflow-hidden pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
-                <div class="order-2 lg:order-1">
-                    <div class="mb-6">
-                        <span
-                            class="inline-block px-4 py-2 bg-gradient-to-r from-accent-green/20 to-light-cyan/20 rounded-full text-accent-green border border-accent-green/30 text-sm font-medium">
+    <section class="min-h-screen flex items-center pt-24 pb-12 px-4">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <div class="mb-4">
+                        <span class="inline-block px-4 py-1 bg-soft-beige rounded text-med-gold text-[10px] font-black uppercase tracking-[0.2em]">
                             🩺 Advanced Aneurysm Care
                         </span>
                     </div>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                        <span class="gradient-text">Brain Aneurysm</span><br>
-                        <span class="text-white">Treatment</span>
+                    <h1 class="serif-font text-5xl md:text-8xl italic mb-6 leading-[1.1] break-words">
+                        Brain Aneurysm<br>
+                        <span class="text-med-gold">Treatment</span>
                     </h1>
-                    <p class="text-xl md:text-2xl mb-8 text-light-cyan">
+                    <p class="text-lg md:text-2xl mb-8 md:mb-10 text-med-primary/70 font-light italic leading-relaxed max-w-xl mx-auto lg:mx-0">
                         Expert minimally invasive aneurysm treatment with advanced endovascular techniques
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button
-                            class="px-8 py-4 bg-gradient-to-r from-accent-green to-medical-teal rounded-lg font-semibold hover-glow transition-all duration-300">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="bg-med-gold text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-med-primary transition-all">
                             Book Consultation
                         </button>
-                        <button
-                            class="px-8 py-4 border border-light-cyan text-light-cyan rounded-lg font-semibold hover:bg-light-cyan hover:text-dark-navy transition-all duration-300">
+                        <button class="px-10 py-4 border-2 border-soft-beige text-med-primary rounded-xl font-bold uppercase tracking-widest text-xs hover:border-med-gold transition-all">
                             Learn More
                         </button>
                     </div>
                 </div>
                 <div class="order-1 lg:order-2">
-                    <div class="relative">
-                        <div
-                            class="w-full h-96 bg-gradient-to-br overflow-hidden from-medical-purple/20 to-accent-orange/20 rounded-3xl flex items-center justify-center">
-                            <div class="text-center">
-                                <img src="images/img2.jpg" alt="Brain Aneurysm Treatment Doctors In Bhubaneswar">
-                            </div>
-                        </div>
+                    <div class="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border-[8px] md:border-[12px] border-white shadow-2xl">
+                        <img src="images/img2.jpg" alt="Brain Aneurysm Treatment Doctors In Bhubaneswar" class="w-full h-64 md:h-[500px] object-cover">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gradient-to-b from-dark-navy to-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">Aneurysm Treatment</span> Services
+    <section id="services" class="py-20 md:py-32 bg-soft-beige/30 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-24">
+                <h2 class="serif-font text-5xl md:text-7xl italic mb-8">
+                    <span class="text-med-gold">Aneurysm Treatment</span> Services
                 </h2>
-                <p class="text-xl text-gray-200 max-w-4xl mx-auto text-justify leading-relaxed">
-                    Under the expert care of Dr. Seetam, one of the most experienced and trusted specialists in the
-                    region,
-                    we provide the Best Brain Aneurysm Treatment Doctors in Bhubaneswar with comprehensive and
-                    personalized care.
-                    Our expert team led by Dr. Seetam offers advanced and result-oriented aneurysm treatment in
-                    Bhubaneswar,
-                    ensuring world-class medical support with compassion and excellence.
+                <div class="w-20 h-0.5 bg-med-gold mx-auto mb-10"></div>
+                <p class="text-base md:text-lg text-med-primary/70 max-w-4xl mx-auto leading-relaxed text-justify font-medium">
+                    Under the expert care of Dr. Seetam, one of the most experienced and trusted specialists in the region, we provide the Best Brain Aneurysm Treatment Doctors in Bhubaneswar with comprehensive and personalized care. Our expert team led by Dr. Seetam offers advanced and result-oriented aneurysm treatment in Bhubaneswar, ensuring world-class medical support with compassion and excellence.
                 </p>
-
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-effect rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-4xl mb-4">🔧</div>
-                    <h3 class="text-2xl font-bold mb-4 text-accent-green">Endovascular Coiling</h3>
-                    <p class="text-gray-300">
-                        Minimally invasive procedure using platinum coils to seal aneurysms from inside the blood
-                        vessel.
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
+                    <div class="text-4xl mb-6">🔧</div>
+                    <h3 class="serif-font text-3xl italic mb-4">Endovascular Coiling</h3>
+                    <p class="text-med-primary/60 text-sm leading-relaxed">
+                        Minimally invasive procedure using platinum coils to seal aneurysms from inside the blood vessel.
                     </p>
                 </div>
 
-                <div class="glass-effect rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-4xl mb-4">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-accent-green">Flow Diverter Stents</h3>
-                    <p class="text-gray-300">
+                <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
+                    <div class="text-4xl mb-6">🛡️</div>
+                    <h3 class="serif-font text-3xl italic mb-4">Flow Diverter Stents</h3>
+                    <p class="text-med-primary/60 text-sm leading-relaxed">
                         Advanced stent technology to redirect blood flow and promote aneurysm healing.
                     </p>
                 </div>
 
-                <div class="glass-effect rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-2xl font-bold mb-4 text-accent-green">Balloon Occlusion</h3>
-                    <p class="text-gray-300">
+                <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
+                    <div class="text-4xl mb-6">🎯</div>
+                    <h3 class="serif-font text-3xl italic mb-4">Balloon Occlusion</h3>
+                    <p class="text-med-primary/60 text-sm leading-relaxed">
                         Precise balloon placement to block blood flow to aneurysms in complex cases.
                     </p>
                 </div>
 
-                <div class="glass-effect rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-4xl mb-4">📊</div>
-                    <h3 class="text-2xl font-bold mb-4 text-accent-green">3D Imaging</h3>
-                    <p class="text-gray-300">
+                <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
+                    <div class="text-4xl mb-6">📊</div>
+                    <h3 class="serif-font text-3xl italic mb-4">3D Imaging</h3>
+                    <p class="text-med-primary/60 text-sm leading-relaxed">
                         Advanced 3D angiography for precise aneurysm visualization and treatment planning.
                     </p>
                 </div>
 
-                <div class="glass-effect rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold mb-4 text-accent-green">Emergency Treatment</h3>
-                    <p class="text-gray-300">
+                <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
+                    <div class="text-4xl mb-6">⚡</div>
+                    <h3 class="serif-font text-3xl italic mb-4">Emergency Treatment</h3>
+                    <p class="text-med-primary/60 text-sm leading-relaxed">
                         24/7 emergency care for ruptured aneurysms with immediate intervention capabilities.
                     </p>
                 </div>
 
-                <div class="glass-effect rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-4xl mb-4">🔍</div>
-                    <h3 class="text-2xl font-bold mb-4 text-accent-green">Follow-up Care</h3>
-                    <p class="text-gray-300">
+                <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
+                    <div class="text-4xl mb-6">🔍</div>
+                    <h3 class="serif-font text-3xl italic mb-4">Follow-up Care</h3>
+                    <p class="text-med-primary/60 text-sm leading-relaxed">
                         Comprehensive post-treatment monitoring and long-term care management.
                     </p>
                 </div>
@@ -209,70 +191,71 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-b from-slate-900 to-dark-navy">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">Contact Us</span>
-                </h2>
-                <p class="text-xl text-gray-300">
+    <section id="contact" class="py-20 md:py-32 bg-bg-cream px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="serif-font text-5xl md:text-7xl italic mb-6">Contact Us</h2>
+                <p class="text-med-gold font-bold uppercase tracking-widest text-[10px]">
                     Get expert consultation for aneurysm treatment
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="glass-effect rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-accent-green">Get in Touch</h3>
-                    <div class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <div class="bg-pure-white border border-soft-beige rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12">
+                    <h3 class="serif-font text-3xl md:text-4xl italic mb-10 text-med-primary">Get in Touch</h3>
+                    <div class="space-y-8">
                         <div class="flex items-center">
-                            <div class="text-2xl mr-4">📞</div>
+                            <div class="w-12 h-12 rounded-full bg-soft-beige flex items-center justify-center mr-5 text-med-gold text-lg">
+                                <i class="fas fa-phone"></i>
+                            </div>
                             <div>
-                                <p class="font-semibold">Phone</p>
-                                <p class="text-gray-300">+91 XXXXX XXXXX</p>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-med-gold">Phone</p>
+                                <p class="text-med-primary text-lg md:text-xl font-semibold break-all">+91 93486 37767</p>
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <div class="text-2xl mr-4">📧</div>
+                            <div class="w-12 h-12 rounded-full bg-soft-beige flex items-center justify-center mr-5 text-med-gold text-lg">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <div>
-                                <p class="font-semibold">Email</p>
-                                <p class="text-gray-300">info@drseetamkumar.com</p>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-med-gold">Email</p>
+                                <p class="text-med-primary text-sm md:text-lg font-semibold break-all">contact@drseetamkumar.com</p>
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <div class="text-2xl mr-4">📍</div>
+                            <div class="w-12 h-12 rounded-full bg-soft-beige flex items-center justify-center mr-5 text-med-gold text-lg">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
                             <div>
-                                <p class="font-semibold">Location</p>
-                                <p class="text-gray-300">Bhubaneswar, Odisha</p>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-med-gold">Location</p>
+                                <p class="text-med-primary text-xs md:text-sm leading-relaxed">Plot No.1, Besides, Satyasai Enclave Rd, Khandagiri Bhubaneswar, India 751030 Odisha</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-effect rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-accent-green">Schedule Consultation</h3>
-                    <p class="text-gray-300 mb-6">
+                <div class="bg-med-primary rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 text-pure-white flex flex-col justify-center">
+                    <h3 class="serif-font text-4xl md:text-5xl italic mb-6 text-med-gold">Schedule Consultation</h3>
+                    <p class="text-pure-white/70 mb-10 text-lg leading-relaxed italic font-light">
                         Early detection and treatment of aneurysms can prevent serious complications.
                     </p>
-                    <button
-                        class="w-full px-8 py-4 bg-gradient-to-r from-accent-green to-medical-teal rounded-lg font-semibold hover-glow transition-all duration-300">
+                    <button class="w-full px-8 py-5 bg-med-gold text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-white hover:text-med-primary transition-all shadow-xl shadow-med-gold/20">
                         Book Appointment
                     </button>
+                    <div class="mt-8 pt-8 border-t border-white/10 text-center">
+                        <p class="text-[9px] font-black uppercase tracking-widest text-white/50">Available for emergencies 24/7</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark-navy py-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-gray-400">
-                    © 2024 Dr. T. Seetam Kumar - Aneurysm Treatment Specialist. All rights reserved.
-                </p>
-            </div>
+    <footer class="bg-pure-white py-12 px-4 border-t border-soft-beige">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-med-primary/40 text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em]">
+                © 2024 Dr. T. Seetam Kumar - Aneurysm Treatment Specialist. All rights reserved.
+            </p>
         </div>
     </footer>
 </body>
-
 </html>
