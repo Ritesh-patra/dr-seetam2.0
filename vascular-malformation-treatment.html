@@ -44,7 +44,10 @@
         .hero-bg::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: radial-gradient(circle at 20% 50%, rgba(197, 160, 89, 0.15) 0%, transparent 50%);
             pointer-events: none;
         }
@@ -54,29 +57,34 @@
 <body class="bg-bg-cream text-med-primary selection:bg-med-gold selection:text-white">
     <nav class="fixed top-0 w-full z-50 glass-effect">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="index.html" class="w-14 h-14 rounded-full overflow-hidden mr-3 border-2 border-med-gold shadow-md">
-                        <img src="images/dr soumik.jpg" alt="Logo" class="w-full h-full object-cover object-top" />
-                    </a>
-                    <span class="text-xl font-bold tracking-tight">Dr. Seetam Kumar</span>
-                </div>
+            <div class="flex items-center justify-between py-4">
+
+                <!-- LEFT SIDE (Back button - only mobile) -->
+                   <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Dr. T. Seetam Kumar"
+                    class="h-12 md:h-16 w-auto scale-[1.4] object-contain transition-transform duration-300 ">
+            </a>
+
+                <!-- DESKTOP MENU -->
                 <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wider">
                     <a href="index.html" class="hover:text-med-gold transition-colors">Home</a>
                     <a href="index.html#about" class="hover:text-med-gold transition-colors">About</a>
                     <a href="index.html#services" class="hover:text-med-gold transition-colors">Services</a>
                     <a href="index.html#contact" class="hover:text-med-gold transition-colors">Contact</a>
                 </div>
+
             </div>
         </div>
     </nav>
+
 
     <section class="min-h-screen hero-bg relative flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center py-16">
                 <div class="order-2 lg:order-1">
                     <div class="mb-6">
-                        <span class="inline-block px-4 py-2 bg-med-gold/20 rounded-full text-med-gold border border-med-gold/30 text-xs font-bold tracking-widest uppercase">
+                        <span
+                            class="inline-block px-4 py-2 bg-med-gold/20 rounded-full text-med-gold border border-med-gold/30 text-xs font-bold tracking-widest uppercase">
                             🩸 Vascular Expertise
                         </span>
                     </div>
@@ -100,8 +108,10 @@
                 </div>
                 <div class="order-1 lg:order-2">
                     <div class="relative group">
-                        <div class="absolute -inset-1 bg-med-gold rounded-3xl blur opacity-20 transition duration-1000"></div>
-                        <div class="relative w-full h-80 md:h-[450px] bg-soft-beige overflow-hidden rounded-3xl border-4 border-med-primary shadow-2xl">
+                        <div class="absolute -inset-1 bg-med-gold rounded-3xl blur opacity-20 transition duration-1000">
+                        </div>
+                        <div
+                            class="relative w-full h-80 md:h-[450px] bg-soft-beige overflow-hidden rounded-3xl border-4 border-med-primary shadow-2xl">
                             <img class="w-full h-full object-cover" src="images/img6.jpg"
                                 alt="Vascular Malformation Treatment Odisha">
                         </div>
@@ -120,61 +130,82 @@
                 <div class="w-24 h-1 bg-med-gold mx-auto mb-10"></div>
                 <div class="max-w-4xl mx-auto space-y-6 text-lg text-med-primary/80">
                     <p class="leading-relaxed font-medium text-justify">
-                        Dr. Seetam Kumar is recognized as the leading expert providing comprehensive vascular malformation
+                        Dr. Seetam Kumar is recognized as the leading expert providing comprehensive vascular
+                        malformation
                         treatment in Odisha with exceptional care. Our specialists offer advanced vascular malformation
                         treatment in Bhubaneswar using cutting-edge interventional techniques.
                     </p>
                     <p class="leading-relaxed text-med-primary/60 italic text-justify">
-                        With years of experience in interventional radiology, Dr. Seetam Kumar provides precise, minimally
+                        With years of experience in interventional radiology, Dr. Seetam Kumar provides precise,
+                        minimally
                         invasive treatments for all types of vascular malformations. His advanced techniques and
-                        compassionate approach have helped countless patients achieve excellent outcomes with minimal recovery time.
+                        compassionate approach have helped countless patients achieve excellent outcomes with minimal
+                        recovery time.
                     </p>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">🎯</div>
+                <div
+                    class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div
+                        class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">
+                        🎯</div>
                     <h3 class="text-2xl font-bold mb-4">Embolization Therapy</h3>
                     <p class="text-med-primary/70">
                         Precise blocking of abnormal blood vessels using coils, plugs, and embolic agents.
                     </p>
                 </div>
 
-                <div class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">🔬</div>
+                <div
+                    class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div
+                        class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">
+                        🔬</div>
                     <h3 class="text-2xl font-bold mb-4">Sclerotherapy</h3>
                     <p class="text-med-primary/70">
                         Chemical treatment to close abnormal vascular connections and malformations safely.
                     </p>
                 </div>
 
-                <div class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">🎈</div>
+                <div
+                    class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div
+                        class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">
+                        🎈</div>
                     <h3 class="text-2xl font-bold mb-4">Balloon Occlusion</h3>
                     <p class="text-med-primary/70">
                         Temporary or permanent balloon placement to redirect blood flow away from malformations.
                     </p>
                 </div>
 
-                <div class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">📊</div>
+                <div
+                    class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div
+                        class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">
+                        📊</div>
                     <h3 class="text-2xl font-bold mb-4">Advanced Imaging</h3>
                     <p class="text-med-primary/70">
                         3D angiography and MRI for detailed mapping of complex vascular malformations.
                     </p>
                 </div>
 
-                <div class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">🧠</div>
+                <div
+                    class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div
+                        class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">
+                        🧠</div>
                     <h3 class="text-2xl font-bold mb-4">Cerebral Cases</h3>
                     <p class="text-med-primary/70">
                         Specialized treatment of brain vascular malformations with minimal invasive techniques.
                     </p>
                 </div>
 
-                <div class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
-                    <div class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">🔄</div>
+                <div
+                    class="bg-bg-cream border border-soft-beige rounded-2xl p-8 hover-glow transition-all duration-300">
+                    <div
+                        class="text-3xl mb-6 bg-pure-white w-14 h-14 flex items-center justify-center rounded-xl shadow-sm text-med-gold">
+                        🔄</div>
                     <h3 class="text-2xl font-bold mb-4">Follow-up Care</h3>
                     <p class="text-med-primary/70">
                         Comprehensive monitoring and staged treatment approaches for complex clinical cases.
@@ -196,8 +227,8 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-pure-white rounded-2xl p-8 border border-med-gold/20 shadow-lg">
-                    <h3 class="text-2xl font-bold mb-8 text-med-primary">Get in Touch</h3>
+                <div class="bg-pure-white shadow-xl rounded-2xl p-8 border-t-4 border-med-gold">
+                    <h3 class="text-2xl font-bold mb-6 text-med-primary">Get in Touch</h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="text-2xl mr-4 text-med-gold">📞</div>
@@ -217,11 +248,13 @@
                             <div class="text-2xl mr-4 text-med-gold">📍</div>
                             <div>
                                 <p class="font-bold text-med-primary">Location</p>
-                                <p class="text-med-primary/70">Plot No.1, Besides, Satyasai Enclave Rd, Khandagiri Bhubaneswar, Odisha 751030</p>
+                                <p class="text-med-primary/70">Plot No.1, Besides, Satyasai Enclave Rd, Khandagiri
+                                    Bhubaneswar, India 751030 Odisha</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="bg-med-primary rounded-[2rem] p-10 text-pure-white shadow-2xl relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-med-gold/10 rounded-full -mr-16 -mt-16"></div>

@@ -27,11 +27,15 @@
         }
     </script>
     <style>
+        @font-face {
+            font-family: gilroy;
+            src: url(font/Gilroy-Medium.ttf);
+        }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             overflow-x: hidden; 
         }
-        .serif-font { font-family: 'Instrument Serif', serif; }
+        .serif-font { font-family: gilroy, serif; }
 
         .glass-effect {
             background: #FDFBF7;
@@ -67,9 +71,10 @@
     <nav class="fixed top-0 w-full z-50 glass-effect">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <span class="text-xl md:text-2xl serif-font italic font-bold text-med-primary">Dr. Seetam Kumar</span>
-                </div>
+                   <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Dr. T. Seetam Kumar"
+                    class="h-12 md:h-16 w-auto scale-[1.4] object-contain transition-transform duration-300 ">
+            </a>
                 
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="index.html" class="text-[10px] font-black uppercase tracking-widest hover:text-med-gold transition-colors">Home</a>
@@ -102,11 +107,11 @@
                             🩺 Advanced Aneurysm Care
                         </span>
                     </div>
-                    <h1 class="serif-font text-5xl md:text-8xl italic mb-6 leading-[1.1] break-words">
+                    <h1 class="serif-font text-5xl md:text-8xl  mb-6 leading-[1.1] break-words">
                         Brain Aneurysm<br>
                         <span class="text-med-gold">Treatment</span>
                     </h1>
-                    <p class="text-lg md:text-2xl mb-8 md:mb-10 text-med-primary/70 font-light italic leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    <p class="text-lg md:text-2xl mb-8 md:mb-10 text-med-primary/70 font-light  leading-relaxed max-w-xl mx-auto lg:mx-0">
                         Expert minimally invasive aneurysm treatment with advanced endovascular techniques
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -130,7 +135,7 @@
     <section id="services" class="py-20 md:py-32 bg-soft-beige/30 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 md:mb-24">
-                <h2 class="serif-font text-5xl md:text-7xl italic mb-8">
+                <h2 class="serif-font text-5xl md:text-7xl  mb-8">
                     <span class="text-med-gold">Aneurysm Treatment</span> Services
                 </h2>
                 <div class="w-20 h-0.5 bg-med-gold mx-auto mb-10"></div>
@@ -142,7 +147,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
                     <div class="text-4xl mb-6">🔧</div>
-                    <h3 class="serif-font text-3xl italic mb-4">Endovascular Coiling</h3>
+                    <h3 class="serif-font text-3xl  mb-4">Endovascular Coiling</h3>
                     <p class="text-med-primary/60 text-sm leading-relaxed">
                         Minimally invasive procedure using platinum coils to seal aneurysms from inside the blood vessel.
                     </p>
@@ -150,7 +155,7 @@
 
                 <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
                     <div class="text-4xl mb-6">🛡️</div>
-                    <h3 class="serif-font text-3xl italic mb-4">Flow Diverter Stents</h3>
+                    <h3 class="serif-font text-3xl  mb-4">Flow Diverter Stents</h3>
                     <p class="text-med-primary/60 text-sm leading-relaxed">
                         Advanced stent technology to redirect blood flow and promote aneurysm healing.
                     </p>
@@ -158,7 +163,7 @@
 
                 <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
                     <div class="text-4xl mb-6">🎯</div>
-                    <h3 class="serif-font text-3xl italic mb-4">Balloon Occlusion</h3>
+                    <h3 class="serif-font text-3xl  mb-4">Balloon Occlusion</h3>
                     <p class="text-med-primary/60 text-sm leading-relaxed">
                         Precise balloon placement to block blood flow to aneurysms in complex cases.
                     </p>
@@ -166,7 +171,7 @@
 
                 <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
                     <div class="text-4xl mb-6">📊</div>
-                    <h3 class="serif-font text-3xl italic mb-4">3D Imaging</h3>
+                    <h3 class="serif-font text-3xl  mb-4">3D Imaging</h3>
                     <p class="text-med-primary/60 text-sm leading-relaxed">
                         Advanced 3D angiography for precise aneurysm visualization and treatment planning.
                     </p>
@@ -174,7 +179,7 @@
 
                 <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
                     <div class="text-4xl mb-6">⚡</div>
-                    <h3 class="serif-font text-3xl italic mb-4">Emergency Treatment</h3>
+                    <h3 class="serif-font text-3xl  mb-4">Emergency Treatment</h3>
                     <p class="text-med-primary/60 text-sm leading-relaxed">
                         24/7 emergency care for ruptured aneurysms with immediate intervention capabilities.
                     </p>
@@ -182,7 +187,7 @@
 
                 <div class="solid-card p-8 md:p-10 rounded-[2rem] hover:border-med-gold transition-all duration-300">
                     <div class="text-4xl mb-6">🔍</div>
-                    <h3 class="serif-font text-3xl italic mb-4">Follow-up Care</h3>
+                    <h3 class="serif-font text-3xl  mb-4">Follow-up Care</h3>
                     <p class="text-med-primary/60 text-sm leading-relaxed">
                         Comprehensive post-treatment monitoring and long-term care management.
                     </p>
@@ -194,7 +199,7 @@
     <section id="contact" class="py-20 md:py-32 bg-bg-cream px-4">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 md:mb-20">
-                <h2 class="serif-font text-5xl md:text-7xl italic mb-6">Contact Us</h2>
+                <h2 class="serif-font text-5xl md:text-7xl  mb-6">Contact Us</h2>
                 <p class="text-med-gold font-bold uppercase tracking-widest text-[10px]">
                     Get expert consultation for aneurysm treatment
                 </p>
@@ -202,7 +207,7 @@
 
             <div class="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div class="bg-pure-white border border-soft-beige rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12">
-                    <h3 class="serif-font text-3xl md:text-4xl italic mb-10 text-med-primary">Get in Touch</h3>
+                    <h3 class="serif-font text-3xl md:text-4xl  mb-10 text-med-primary">Get in Touch</h3>
                     <div class="space-y-8">
                         <div class="flex items-center">
                             <div class="w-12 h-12 rounded-full bg-soft-beige flex items-center justify-center mr-5 text-med-gold text-lg">
@@ -235,8 +240,8 @@
                 </div>
 
                 <div class="bg-med-primary rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 text-pure-white flex flex-col justify-center">
-                    <h3 class="serif-font text-4xl md:text-5xl italic mb-6 text-med-gold">Schedule Consultation</h3>
-                    <p class="text-pure-white/70 mb-10 text-lg leading-relaxed italic font-light">
+                    <h3 class="serif-font text-4xl md:text-5xl  mb-6 text-med-gold">Schedule Consultation</h3>
+                    <p class="text-pure-white/70 mb-10 text-lg leading-relaxed  font-light">
                         Early detection and treatment of aneurysms can prevent serious complications.
                     </p>
                     <button class="w-full px-8 py-5 bg-med-gold text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-white hover:text-med-primary transition-all shadow-xl shadow-med-gold/20">
